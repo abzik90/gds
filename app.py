@@ -1,8 +1,15 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, render_template
 from flask_cors import CORS  # Import the CORS module
 
 app = Flask(__name__)
 CORS(app)
+
+
+@app.route('/', methods=['GET'])
+def home():
+    return render_template('home.html')
+
+
 @app.route('/route')
 def get_route_coordinates():
     # Replace this with logic to fetch dynamic coordinates from your database or another data source
