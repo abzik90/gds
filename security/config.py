@@ -1,1 +1,2 @@
-DB_URI = 'postgres://postgres:postgres@localhost:5432/postgres'
+DB_URI = 'sqlite:///attraction.db'
+API_KEY = 'yandex_api_key'

@@ -20,7 +20,7 @@ function init() {
     // Точки маршрута можно задавать 3 способами:
     // как строка, как объект или как массив геокоординат.
     // Make AJAX request to Flask API to get route coordinates
-    $.getJSON('http://localhost:5000/route', function(data) {
+    $.getJSON('http://localhost:5000/api/v1/route', function(data) {
         ymaps.route(data).then(function (route) {
             myMap.geoObjects.add(route);
             // Add customizations if needed
